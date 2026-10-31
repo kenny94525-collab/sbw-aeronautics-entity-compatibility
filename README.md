@@ -1,0 +1,1 @@
+# sbw-aeronautics-entity-compatibility
