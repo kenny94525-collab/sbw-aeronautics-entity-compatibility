@@ -1,0 +1,39 @@
+modLoader     = "kotlinforforge"
+loaderVersion = "[5,)"
+license       = "MIT"
+
+[[mods]]
+    modId       = "swcacompat"
+    version     = "1.0.0"
+    displayName = "SW x CA Compat"
+    description = "Superb Warfare vehicles and turrets are retained on Create Aeronautics / Sable sub-levels."
+
+[[dependencies.swcacompat]]
+    modId        = "neoforge"
+    type         = "required"
+    versionRange = "[21.1.203,)"
+    ordering     = "NONE"
+    side         = "BOTH"
+
+# 功能本體是 Sable 的 entity_type 標籤，因此 Sable 必須存在
+[[dependencies.swcacompat]]
+    modId        = "sable"
+    type         = "required"
+    versionRange = "[2.0,)"
+    ordering     = "AFTER"
+    side         = "BOTH"
+
+# 被保留的實體來自 Superb Warfare（你的版本是 0.8.9）
+[[dependencies.swcacompat]]
+    modId        = "superbwarfare"
+    type         = "required"
+    versionRange = "[0.8,)"
+    ordering     = "AFTER"
+    side         = "BOTH"
+
+[[dependencies.swcacompat]]
+    modId        = "kotlinforforge"
+    type         = "required"
+    versionRange = "[5,)"
+    ordering     = "AFTER"
+    side         = "BOTH"
